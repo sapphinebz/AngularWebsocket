@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { WebsocketService } from 'src/shared/websocket-rxjs/websocket.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [WebsocketService],
 })
-export class AppComponent {
-  title = 'AngularWebsocket';
+export class AppComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
 }
